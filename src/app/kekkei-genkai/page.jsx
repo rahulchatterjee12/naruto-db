@@ -17,8 +17,6 @@ const KekkeiGenkai = () => {
         refetch({ limit: 12, page: page })
     }, [page])
 
-    console.log(kekkeiGenkais)
-
     return (
         <div>
             <div className='text-[20px] md:text-[40px] font-bold italic mt-5'>All Clans:</div>

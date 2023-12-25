@@ -8,8 +8,6 @@ const Hero = () => {
     const pathname = usePathname().split('/').pop();
     const { data, isLoading } = useGetCharacterByIdQuery({ id: pathname });
 
-    console.log(data)
-
     return (
         <>
             {!isLoading ?

@@ -6,7 +6,6 @@ import React from 'react'
 
 const TeamMember = ({ id }) => {
     const { data } = useGetCharacterByIdQuery({ id: id })
-    console.log(data)
     return (<div>
         {data &&
             <>
@@ -23,7 +22,6 @@ const TeamMember = ({ id }) => {
 
 const TeamCard = ({ data }) => {
     const router = useRouter();
-    console.log(data)
     return (
         <Box
             sx={{
