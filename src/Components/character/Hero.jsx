@@ -25,10 +25,10 @@ const Hero = () => {
                         <img src={data?.images[0] ? data?.images[0] : ''} className='md:w-[20vw]  md:h-[260px] rounded absolute -top-20 md:left-16 lg:left-36 bg-white object-cover' />
                         <div className=' rounded absolute font-serif italic  md:right-5 lg:right-10 top-6 text-black gap-6'>
                             <h2 className='text-3xl'>{data.name}</h2>
-                            <h2 className='text-lg '>Clan : {data?.personal?.clan ? data?.personal?.clan?.match(/^[^\(]+/)[0].trim() : '-'}</h2>
+                            <h2 className='text-lg '>Clan : {data?.personal?.clan ? data?.personal?.clan : '-'}</h2>
                             <h2 className='text-lg'>Birthday: {data.personal.birthdate ? data.personal.birthdate : '-'}</h2>
                             <h2 className='text-lg'>Rank : {data?.rank?.ninjaRank ? Object.entries(data?.rank?.ninjaRank)[0][1] : '-'}</h2>
-                            <h2 className='text-lg '>Chakra Nature : {data?.natureType ? data.natureType[0]?.match(/^[^\(]+/)[0].trim() : '-'} {data?.natureType?.length >= 2 ? `(${data.natureType.length - 1} more)` : ''}</h2>
+                            <h2 className='text-lg '>Chakra Nature : {data?.natureType ? data.natureType[0] : '-'} {data?.natureType?.length >= 2 ? `(${data.natureType.length - 1} more)` : ''}</h2>
                             <div className='flex gap-3 justify-evenly mt-3'>
                                 {
                                     Array.isArray(data?.personal?.classification) > 0 &&

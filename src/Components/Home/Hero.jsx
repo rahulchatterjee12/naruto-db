@@ -1,7 +1,9 @@
 import { Button } from '@mui/material';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 const Hero = () => {
+    const router = useRouter();
     return (
         <div className='flex flex-col md:flex-row justify-between'>
             <div className='ml-5 md:w-[45%] lg:w-[35%] lg:mt-16'>
@@ -18,11 +20,19 @@ const Hero = () => {
                     characters, powerful jutsu, and village secrets. Immerse yourself
                     in the essence of the Hidden Leaf and beyond.
                 </h4>
-                <div className='mt-[10%] flex gap-5 justify-center md:justify-start'>
+                <div className='mt-[10%] flex gap-5 justify-center md:justify-start mb-10'>
                     <Button
-                        variant='contained' color='warning' sx={{ borderRadius: 50 }}
+                        onClick={() => router.push('/clans')}
+                        variant='contained'
+                        color='warning'
+                        sx={{ borderRadius: 50 }}
                     >Clans</Button>
-                    <Button variant='outlined' color='warning' sx={{ borderRadius: 50 }}>Characters</Button>
+                    <Button
+                        onClick={() => router.push('/characters')}
+                        variant='outlined'
+                        color='warning'
+                        sx={{ borderRadius: 50 }}
+                    >Characters</Button>
                 </div>
             </div>
 

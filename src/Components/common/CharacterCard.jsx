@@ -31,14 +31,14 @@ const CharacterCard = ({ data }) => {
                                 data.personal.sex
                                 :
                                 '-'}</h3>
-                        <h3>{data?.personal?.clan ? data?.personal?.clan?.match(/^[^\(]+/)[0].trim() : '-'}</h3>
+                        <h3>{data?.personal?.clan ? data?.personal?.clan : '-'}</h3>
                     </div>
                 </div>
             </div>
             <div className='text-black font-serif'>
                 <h3>Rank : {data?.rank?.ninjaRank ? Object.entries(data?.rank?.ninjaRank)[0][1] : '-'}</h3>
                 <h3>Jutsu Count : {data.jutsu ? data?.jutsu.length : ''}</h3>
-                <h3>Chakra Nature : {data?.natureType ? data.natureType[0]?.match(/^[^\(]+/)[0].trim() : '-'}</h3>
+                <h3>Chakra Nature : {data?.natureType ? data.natureType[0] : '-'}</h3>
                 <h3>Kekkei Genkai : {data.personal.kekkeiGenkai ? data?.personal?.kekkeiGenkai[0] : '-'}</h3>
                 <h3>Team : {data.personal.team ? data?.personal?.team[0] : '-'}</h3>
             </div>
