@@ -73,6 +73,8 @@ export const {
     useGetVillagesrByIdQuery,
     useGetAllKekkeiGenkaisQuery,
     useGetKekkeiGenkaiByIdQuery,
+    useGetAllTailedBeastsQuery,
+    useGetTailedBeastByIdQuery,
     useGetAllTeamsQuery,
     useGetTeamByIdQuery,
     useGetAllAkatsukisQuery,
