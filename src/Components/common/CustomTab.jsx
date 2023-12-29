@@ -37,8 +37,8 @@ export default function CustomTab({ value, setValue, tabs }) {
                         backgroundColor: '#010922'
                     }}
                 >
-                    <Tab label="Top 10 Characters" {...a11yProps(0)} />
-                    <Tab label="Top 10 Teams" {...a11yProps(1)} />
+                    <Tab label="Top Characters" {...a11yProps(0)} />
+                    <Tab label="Top Teams" {...a11yProps(1)} />
                 </Tabs>
             </AppBar>
             <SwipeableViews

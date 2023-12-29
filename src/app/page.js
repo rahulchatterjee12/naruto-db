@@ -9,24 +9,24 @@ import { useState } from "react";
 
 
 const CharactersTab = () => {
-  const { data, isLoading } = useGetAllCharactersQuery({ page: 1, limit: 10 })
+  const { data, isLoading } = useGetAllCharactersQuery({ page: 1, limit: 12 })
 
   if (isLoading) return <div className="flex justify-center mt-[10vh] h-auto"> <CircularProgress /></div>
 
   return (
-    <div className="flex gap-6 mt-4 flex-wrap ml-1">
+    <div className="flex gap-6 mt-4 flex-wrap ml-1 justify-center">
       {data && data.characters.map(data => <CharacterCard data={data} key={data.id} />)}
     </div>
   )
 }
 
 const TeamsTab = () => {
-  const { data, isLoading } = useGetAllTeamsQuery({ page: 1, limit: 10 })
+  const { data, isLoading } = useGetAllTeamsQuery({ page: 1, limit: 12 })
 
   if (isLoading) return <div className="flex justify-center mt-[10vh] h-auto"> <CircularProgress /></div>
 
   return (
-    <div className="flex gap-6 mt-4 flex-wrap ml-1">
+    <div className="flex gap-6 mt-4 flex-wrap ml-1 justify-center">
       {data && data.teams.map(data => <TeamCard data={data} key={data.id} />)}
     </div>
   )
