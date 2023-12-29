@@ -4,11 +4,15 @@ import CharacterCard from "@/Components/common/CharacterCard";
 import CustomTab from "@/Components/common/CustomTab";
 import TeamCard from "@/Components/common/TeamCard";
 import { useGetAllCharactersQuery, useGetAllTeamsQuery } from "@/features/apiSlice";
+import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 
 
 const CharactersTab = () => {
   const { data, isLoading } = useGetAllCharactersQuery({ page: 1, limit: 10 })
+
+  if (isLoading) return <div className="flex justify-center mt-[10vh] h-auto"> <CircularProgress /></div>
+
   return (
     <div className="flex gap-6 mt-4 flex-wrap ml-1">
       {data && data.characters.map(data => <CharacterCard data={data} key={data.id} />)}
@@ -17,11 +21,13 @@ const CharactersTab = () => {
 }
 
 const TeamsTab = () => {
-  const { data } = useGetAllTeamsQuery({ page: 1, limit: 10 })
+  const { data, isLoading } = useGetAllTeamsQuery({ page: 1, limit: 10 })
+
+  if (isLoading) return <div className="flex justify-center mt-[10vh] h-auto"> <CircularProgress /></div>
+
   return (
     <div className="flex gap-6 mt-4 flex-wrap ml-1">
       {data && data.teams.map(data => <TeamCard data={data} key={data.id} />)}
-
     </div>
   )
 }
