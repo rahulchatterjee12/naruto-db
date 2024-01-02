@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
 import { ThemeProvider } from '@mui/material';
 import theme from '@/theme';
 import { ApiProvider } from '@reduxjs/toolkit/query/react';
@@ -16,7 +15,6 @@ const Layout = ({ children }) => {
                 <ThemeProvider theme={theme}>
                     <Navbar />
                     {children}
-                    <Footer />
                 </ThemeProvider>
             </ApiProvider>
         </>
