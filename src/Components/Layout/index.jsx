@@ -14,7 +14,9 @@ const Layout = ({ children }) => {
             <ApiProvider api={dataApi}>
                 <ThemeProvider theme={theme}>
                     <Navbar />
-                    {children}
+                    <div className='min-h-[100vh] mb-6'>
+                        {children}
+                    </div>
                 </ThemeProvider>
             </ApiProvider>
         </>

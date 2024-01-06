@@ -19,7 +19,7 @@ const KekkeiGenkai = () => {
 
     return (
         <div>
-            <div className='text-[20px] md:text-[40px] font-bold italic mt-5'>All Clans:</div>
+            <div className='text-[20px] md:text-[40px] font-bold italic mt-5'>All Kekkei Genkais:</div>
 
             <div className=''>
                 {isLoading ?

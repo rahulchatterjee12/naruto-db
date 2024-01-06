@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className='mx-[12vw] flex justify-between'>
                 <Link href='/' className='flex'>
                     <img className='pt-2' src="/logo.svg" alt="Logo" width={50} />
-                    <h2 className='mt-[1.25rem] font-bold font-serif'>NARUTO DB</h2>
+                    <h2 className='mt-[13px] font-bold font-serif text-2xl bg-gradient-to-tl from-[#ea00ff] to-[#00d0ff] text-transparent bg-clip-text'>NARUTO DB</h2>
                 </Link>
                 <div className='flex gap-3 mt-[1.25rem]'>
                     <div onClick={handleClick} className='h-fit p-1 hover:text-orange-400 cursor-pointer'>
