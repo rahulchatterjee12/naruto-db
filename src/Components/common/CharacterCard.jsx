@@ -28,7 +28,7 @@ const CharacterCard = ({ data }) => {
                     }}
                     src={data.images[0] ? data.images[0] : "https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200"}
                     alt="image" />
-                <div className='text-gray-200 font-mono w-full mx-4'>
+                <div className='text-white font-mono w-full mx-4'>
                     <h2>{data.name}</h2>
                     <div className='flex justify-between mt-1'>
                         <h3>{
@@ -40,7 +40,7 @@ const CharacterCard = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <div className='text-gray-200 font-serif'>
+            <div className='text-white font-serif'>
                 <h3>Rank : {data?.rank?.ninjaRank ? Object.entries(data?.rank?.ninjaRank)[0][1] : '-'}</h3>
                 <h3>Jutsu Count : {data.jutsu ? data?.jutsu.length : ''}</h3>
                 <h3>Chakra Nature : {data?.natureType ? data.natureType[0] : '-'}</h3>

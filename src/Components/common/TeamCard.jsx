@@ -12,7 +12,12 @@ const TeamMember = ({ id }) => {
                 <img
                     className='rounded-full w-[75px] h-[75px] bg-cover'
                     src={data.images[0] ? data.images[0] : "https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200"}
-                    alt="image" />
+                    alt="image"
+                    style={{
+                        border: '1px solid rgba(21,32,54,.4)',
+                        boxShadow: '0 6px 8px rgba(159, 52, 255, 0.2)'
+                    }}
+                />
                 <h2 className='text-center mt-1'>{data.name}</h2>
                 <h2 className='text-center '>{data?.personal?.clan ? data?.personal?.clan : '-'}</h2>
             </>}
@@ -25,13 +30,15 @@ const TeamCard = ({ data }) => {
     return (
         <Box
             sx={{
-                backgroundImage: 'linear-gradient(285.53deg, rgba(46, 46, 255, 0.6) -27.34%, rgba(253, 118, 48, 0.6) 112.3%)',
+                background: 'rgba(74, 40, 242, 0.05)',
+                backdropFilter: 'blur(5px)',
                 borderRadius: '7px',
+                border: '1px solid rgba(21,32,54,.4)',
                 width: '280px',
                 padding: 2,
                 position: 'relative',
                 cursor: 'pointer',
-                color: 'black'
+                boxShadow: '0 4px 6px rgba(159, 52, 255, 0.2), inset 0 0 10px rgba(159, 52, 255, 0.2)'
             }}
             onClick={() => { router.push(`/teams/${data.id}`) }}
         >
