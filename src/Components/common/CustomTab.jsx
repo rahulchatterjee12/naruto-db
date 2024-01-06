@@ -27,15 +27,16 @@ export default function CustomTab({ value, setValue, tabs }) {
 
     return (
         <Box sx={{ marginX: 'auto' }} >
-            <AppBar position="static">
+            <AppBar position="static"
+                sx={{
+                    background: 'rgb(0,0,0,0)'
+                }}
+            >
                 <Tabs
                     value={value}
                     onChange={handleChange}
                     indicatorColor="secondary"
                     textColor="inherit"
-                    sx={{
-                        backgroundColor: '#010922'
-                    }}
                 >
                     <Tab label="Top Characters" {...a11yProps(0)} />
                     <Tab label="Top Teams" {...a11yProps(1)} />
