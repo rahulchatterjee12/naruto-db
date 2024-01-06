@@ -11,7 +11,7 @@ const Hero = () => {
                     style={{
                         lineHeight: '103%'
                     }}
-                    className='animate-typing  overflow-hidden whitespace-nowraps font-[700] text-[25px] text-center md:text-left md:text-[35px] lining-[105%] mt-[5%] text-[#FFD2B1]'
+                    className='overflow-hidden whitespace-nowraps font-[700] text-[25px] text-center md:text-left md:text-[35px] lining-[105%] mt-[5%] text-[#FFD2B1]'
                 >
                     Unlock the Hidden Jutsu: Your Ultimate Naruto Database
                 </h1>
@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
 
             <img
-                className=' w-[80%] mx-auto md:mx-0 md:w-[35%] lg:w-[23%] transform animate-pulse animation-duration-500 animation-delay-{{ $i * 100 }}'
+                className=' w-[80%] mx-auto md:mx-0 md:w-[35%] lg:w-[23%]'
                 src="/images/home/hero.svg"
                 alt="Hero"
             />

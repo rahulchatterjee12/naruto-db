@@ -7,21 +7,28 @@ const CharacterCard = ({ data }) => {
     return (
         <Box
             sx={{
-                backgroundImage: 'linear-gradient(285.53deg, rgba(46, 46, 255, 0.6) -27.34%, rgba(253, 118, 48, 0.6) 112.3%)',
+                background: 'rgba(74, 40, 242, 0.05)',
+                backdropFilter: 'blur(5px)',
                 borderRadius: '7px',
+                border: '1px solid rgba(21,32,54,.4)',
                 width: '280px',
                 padding: 2,
                 position: 'relative',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                boxShadow: '0 4px 6px rgba(159, 52, 255, 0.2), inset 0 0 10px rgba(159, 52, 255, 0.2)'
             }}
             onClick={() => { router.push(`/characters/${data.id}`) }}
         >
             <div className='flex justify-between'>
                 <img
                     className='rounded-full w-[75px] h-[75px] bg-cover'
+                    style={{
+                        border: '1px solid rgba(21,32,54,.4)',
+                        boxShadow: '0 6px 8px rgba(159, 52, 255, 0.2)'
+                    }}
                     src={data.images[0] ? data.images[0] : "https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200"}
                     alt="image" />
-                <div className='text-black font-mono w-full mx-4'>
+                <div className='text-gray-200 font-mono w-full mx-4'>
                     <h2>{data.name}</h2>
                     <div className='flex justify-between mt-1'>
                         <h3>{
@@ -33,7 +40,7 @@ const CharacterCard = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <div className='text-black font-serif'>
+            <div className='text-gray-200 font-serif'>
                 <h3>Rank : {data?.rank?.ninjaRank ? Object.entries(data?.rank?.ninjaRank)[0][1] : '-'}</h3>
                 <h3>Jutsu Count : {data.jutsu ? data?.jutsu.length : ''}</h3>
                 <h3>Chakra Nature : {data?.natureType ? data.natureType[0] : '-'}</h3>
