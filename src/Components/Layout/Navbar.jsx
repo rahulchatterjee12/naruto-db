@@ -33,14 +33,20 @@ const Navbar = () => {
                         open={open}
                         onClose={handleClose}
                         variant='menu'
+                        sx={{
+                            '.MuiMenu-paper': {
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                border: '1px solid rgba(234,0 ,225,0.2)'
+                            }
+                        }}
                     >
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
+                                background: 'rgba(232, 107, 39, 0)',
                                 marginTop: -1,
                                 color: 'black',
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
+                                    background: 'rgba(232, 107, 39, 0)',
                                     color: 'blue'
                                 }
                             }}
@@ -52,10 +58,10 @@ const Navbar = () => {
                             Akatsuki</MenuItem>
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
+                                background: 'rgba(232, 107, 39, 0)',
                                 color: 'black',
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
+                                    background: 'rgba(232, 107, 39, 0)',
                                     color: 'blue'
                                 }
                             }}
@@ -66,10 +72,10 @@ const Navbar = () => {
                         >Characters</MenuItem>
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
+                                background: 'rgba(232, 107, 39, 0)',
                                 color: 'black',
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
+                                    background: 'rgba(232, 107, 39, 0)',
                                     color: 'blue'
                                 }
                             }}
@@ -80,10 +86,8 @@ const Navbar = () => {
                         >Clans</MenuItem>
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
                                 color: 'black',
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
                                     color: 'blue'
                                 }
                             }}
@@ -94,10 +98,8 @@ const Navbar = () => {
                         >Kekkei Genkai</MenuItem>
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
                                 color: 'black',
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
                                     color: 'blue'
                                 }
                             }}
@@ -108,10 +110,8 @@ const Navbar = () => {
                         >Tailed Beasts</MenuItem>
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
                                 color: 'black',
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
                                     color: 'blue'
                                 }
                             }}
@@ -122,11 +122,9 @@ const Navbar = () => {
                         >Teams</MenuItem>
                         <MenuItem
                             sx={{
-                                background: 'rgba(232, 107, 39, 0.8)',
                                 color: 'black',
                                 marginBottom: -1,
                                 ":hover": {
-                                    background: 'rgba(232, 107, 39, 0.5)',
                                     color: 'blue'
                                 }
                             }}
