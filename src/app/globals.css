@@ -29,3 +29,26 @@
     background-size: 200% 200%;
     animation: gradientAnimation 12s ease infinite;
 }
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 1px;
+    border: 1px solid var(--primary);
+}

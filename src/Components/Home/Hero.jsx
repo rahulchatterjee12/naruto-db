@@ -1,12 +1,27 @@
+import React from 'react'
 import { Button } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import React from 'react'
+import { motion } from "framer-motion";
+
+const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+}
 
 const Hero = () => {
     const router = useRouter();
     return (
         <div className='flex flex-col md:flex-row justify-between'>
-            <div className='ml-5 md:w-[45%] lg:w-[35%] lg:mt-16'>
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, x: -200, y: 0 },
+                    enter: { opacity: 1, x: 0, y: 0 },
+                }}
+                initial="hidden"
+                animate="enter"
+                transition={{ type: "linear" }}
+                className='ml-5 md:w-[45%] lg:w-[35%] lg:mt-16'
+            >
                 <h1
                     style={{
                         lineHeight: '103%'
@@ -34,9 +49,16 @@ const Hero = () => {
                         sx={{ borderRadius: 50 }}
                     >Characters</Button>
                 </div>
-            </div>
+            </motion.div>
 
-            <img
+            <motion.img
+                variants={{
+                    hidden: { opacity: 0, x: 200, y: 0 },
+                    enter: { opacity: 1, x: 0, y: 0 },
+                }}
+                initial="hidden"
+                animate="enter"
+                transition={{ type: "linear" }}
                 className=' w-[80%] mx-auto md:mx-0 md:w-[35%] lg:w-[23%]'
                 src="/images/home/hero.svg"
                 alt="Hero"
