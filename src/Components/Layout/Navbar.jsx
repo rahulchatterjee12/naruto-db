@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const router = useRouter();
@@ -18,7 +19,15 @@ const Navbar = () => {
         setAnchorEl(null);
     };
     return (
-        <nav className='h-16  bg-[#FFFFFF] bg-opacity-[16%] blur-50 -mx-[5vw] md:-mx-[12vw] lg:-mx-[15vw] '>
+        <motion.nav
+            variants={{
+                hidden: { opacity: 0, x: 0, y: -100 },
+                enter: { opacity: 1, x: 0, y: 0 },
+            }}
+            initial="hidden"
+            animate="enter"
+            transition={{ type: "linear" }}
+            className='h-16  bg-[#FFFFFF] bg-opacity-[16%] blur-50 -mx-[5vw] md:-mx-[12vw] lg:-mx-[15vw] '>
             <div className='mx-[12vw] flex justify-between'>
                 <Link href='/' className='flex'>
                     <img className='pt-2' src="/logo.svg" alt="Logo" width={50} />
@@ -136,7 +145,7 @@ const Navbar = () => {
                     </Menu>
                 </div>
             </div>
-        </nav >
+        </motion.nav >
     )
 }
 
