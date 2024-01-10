@@ -29,9 +29,7 @@ const TeamCard = ({ data }) => {
     const router = useRouter();
     return (
         <motion.div
-            initial={{ opacity: 0, y: -200 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
