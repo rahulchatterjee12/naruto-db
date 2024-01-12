@@ -103,23 +103,23 @@ const squareData = [
   },
   {
     id: 12,
-    src: "/images/hero/12.jpg",
+    src: "/images/hero/13.jpg",
   },
   {
     id: 13,
-    src: "/images/hero/17.jpg",
-  },
-  {
-    id: 14,
     src: "/images/hero/14.jpg",
   },
   {
-    id: 15,
+    id: 14,
     src: "/images/hero/15.jpg",
   },
   {
-    id: 16,
+    id: 15,
     src: "/images/hero/16.jpg",
+  },
+  {
+    id: 16,
+    src: "/images/hero/17.jpg",
   },
 ];
 
