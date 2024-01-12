@@ -7,7 +7,6 @@ import theme from '@/theme';
 import { ApiProvider } from '@reduxjs/toolkit/query/react';
 import { dataApi } from '@/features/apiSlice';
 
-
 const Layout = ({ children }) => {
     return (
         <>

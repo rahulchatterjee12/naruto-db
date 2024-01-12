@@ -59,67 +59,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "",
+    src: "/images/hero/1.jpg",
   },
   {
     id: 2,
-    src: "",
+    src: "/images/hero/2.jpg",
   },
   {
     id: 3,
-    src: "",
+    src: "/images/hero/3.jpg",
   },
   {
     id: 4,
-    src: "",
+    src: "/images/hero/4.jpg",
   },
   {
     id: 5,
-    src: "",
+    src: "/images/hero/5.jpg",
   },
   {
     id: 6,
-    src: "",
+    src: "/images/hero/6.jpg",
   },
   {
     id: 7,
-    src: "",
+    src: "/images/hero/7.jpg",
   },
   {
     id: 8,
-    src: "",
+    src: "/images/hero/8.jpg",
   },
   {
     id: 9,
-    src: "",
+    src: "/images/hero/9.jpg",
   },
   {
     id: 10,
-    src: "",
+    src: "/images/hero/10.jpg",
   },
   {
     id: 11,
-    src: "",
+    src: "/images/hero/11.jpg",
   },
   {
     id: 12,
-    src: "",
+    src: "/images/hero/12.jpg",
   },
   {
     id: 13,
-    src: "",
+    src: "/images/hero/17.jpg",
   },
   {
     id: 14,
-    src: "",
+    src: "/images/hero/14.jpg",
   },
   {
     id: 15,
-    src: "",
+    src: "/images/hero/15.jpg",
   },
   {
     id: 16,
-    src: "",
+    src: "/images/hero/16.jpg",
   },
 ];
 
@@ -134,7 +134,8 @@ const generateSquares = () => {
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "cover",
         borderRadius: "5px",
-        border: '1px solid #000'
+        border: '1px solid #000',
+        backgroundPosition: 'center'
       }}
     ></motion.div>
   ));
