@@ -52,3 +52,15 @@
     border-radius: 1px;
     border: 1px solid var(--primary);
 }
+
+
+.text-reflection::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    font-size: inherit;
+    color: rgba(255, 255, 255, 0.3);
+    transform: scaleY(-1);
+}
